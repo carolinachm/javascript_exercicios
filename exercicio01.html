@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            font-size: 18pt;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .caixatexto{
+            background: #ff0;
+            border: 0;
+            border: 1px solid #000000;
+            font-size: 18pt;
+        }
+        form{
+            width: 400px;
+            border: 22px double #f00;
+            padding: 30px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="form1">
+        <strong>Valor 1:</strong>
+        <input type="text" name="valor1" id="valor1" class="caixatexto"><br>
+        <strong>Valor 2:</strong>
+        <input type="text" name="valor2" id="valor2" class="caixatexto"><br>
+        <strong>Opções</strong><br>
+        <input type="radio" name="opc" id="opc1">Soma<br>
+        <input type="radio" name="opc" id="opc2">Subtracao<br>
+        <input type="radio" name="opc" id="opc3">Multiplicacao<br>
+        <input type="radio" name="opc" id="opc4">Divisao<br>
+        <strong>Resultado</strong><br>
+        <input type="text" name="res" id="res" class="caixatexto"><br>
+        <input type="button" name="calc" id="calcular" value="Calcular"><br>
+    </form>
+</body>
+</html>

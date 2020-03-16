@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.onload = function(){
+            document.getElementById("btn").onclick = function(){
+                calcular();
+            }
+        }
+        function calcular(){
+            var elementos_valor = document.getElementById("txtvalor");
+            var elementos_parcela = document.getElementById("txtparcela");
+            var elementos_resposta = document.getElementById("txtresult");
+
+            var valorcompra = parseFloat(elementos_valor.value);
+            var qtdparcela = parseInt(elementos_parcela.value);
+
+            var msg = "";
+            var valorfinal = 0;
+            var cor = "";
+
+            if( qtdparcela == 1){
+                valorfinal = valorcompra;
+                msg = "1x" + valorfinal;
+                cor = "#16c4f8";
+
+            }else if(qtdparcela  == 2){
+                valorfinal = (valorcompra + (valorcompra * 0.03))/2;
+                msg = "2x" + valorfinal;
+                cor = "#f87504";
+            }else{
+                valorfinal = (valorcompra + (valorcompra * 0.07))/4;
+                msg = "4x" + valorfinal;
+                cor = "#93c3c";
+            }
+            elementos_valor.value = "";
+            elementos_resposta.value = msg;
+            elementos_resposta.style.backgroundColor = cor;
+
+        }
+        
+       
+    </script>
+    <style>
+      
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Valor compra: <br>
+        <input type="text" id="txtvalor"><br>
+        Parcelas: <br>
+        <select name="parcela" id="txtparcela">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="4">4</option>
+        </select>
+        <br>
+        Valor das parcelas: <br>
+        <input type="text" id="txtresult" readonly><br>
+        <input type="button" value="Calcular" id="btn">
+    </form>
+    
+</body>
+</html>
